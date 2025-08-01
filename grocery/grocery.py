@@ -1,12 +1,12 @@
-grocery_list = {}
+items = {}
 
 try:
     while True:
-        item = input().strip().upper()
-        if item in grocery_list:
-            grocery_list[item] += 1
+        item = input().strip().lower()
+        if item in items:
+            items[item] += 1
         else:
-            grocery_list[item] = 1
+            items[item] = 1
 except EOFError:
-    for item in sorted(grocery_list):
-        print(f"{grocery_list[item]} {item}")
+    for item in sorted(items):
+        print(f"{items[item]} {item.upper()}")

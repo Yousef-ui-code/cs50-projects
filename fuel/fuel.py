@@ -6,7 +6,7 @@ def main():
             x = int(x)
             y = int(y)
 
-            if y == 0 or x > y:
+            if y == 0 or x > y or x < 0 or y < 0:
                 raise ValueError
 
             percentage = round((x / y) * 100)
@@ -21,7 +21,6 @@ def main():
 
         except (ValueError, ZeroDivisionError):
             continue
-
 
 if __name__ == "__main__":
     main()
